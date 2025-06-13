@@ -78,7 +78,7 @@ const Avatar = () => {
     const loader = new GLTFLoader();
     
     loader.load(
-      '../../src/model/684003464dd7d2ae2bf40688.glb',
+      './684003464dd7d2ae2bf40688.glb',
       
       // onLoad callback
       (gltf) => {
