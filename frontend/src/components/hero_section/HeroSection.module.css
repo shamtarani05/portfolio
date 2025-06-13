@@ -1,0 +1,147 @@
+/* src/components/Portfolio/HeroSection/HeroSection.module.css */
+.hero {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+  padding: 1rem;
+  padding-top: 9rem;
+}
+
+.container {
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+@media (min-width: 1024px) {
+  .content {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.textSection {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.codeIntro {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #22d3ee;
+  font-size: 1.125rem;
+  font-family: 'Courier New', monospace;
+}
+
+.playIcon {
+  animation: pulse 2s infinite;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: bold;
+  color: white;
+  line-height: 1.1;
+  font-family: 'Courier New', monospace;
+}
+
+@media (min-width: 1024px) {
+  .title {
+    font-size: 4.5rem;
+  }
+}
+
+.titleGradient {
+  background: linear-gradient(to right, #22d3ee, #a855f7, #ec4899);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.codeBlock {
+  color: #d1d5db;
+  font-size: 1.125rem;
+  font-family: 'Courier New', monospace;
+  line-height: 1.6;
+}
+
+.const {
+  color: #ec4899;
+}
+
+.variable {
+  color: #fbbf24;
+}
+
+.property {
+  color: #22d3ee;
+  margin-left: 1rem;
+}
+
+.string {
+  color: #10b981;
+}
+
+.description {
+  color: #d1d5db;
+  font-size: 1.125rem;
+  line-height: 1.7;
+  max-width: 32rem;
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.primaryButton {
+  padding: 0.75rem 2rem;
+  background: linear-gradient(to right, #22d3ee, #a855f7);
+  color: black;
+  font-weight: bold;
+  border-radius: 0.5rem;
+  border: none;
+  font-family: 'Courier New', monospace;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.primaryButton:hover {
+  box-shadow: 0 10px 15px -3px rgba(34, 211, 238, 0.25);
+  transform: scale(1.05);
+}
+
+.secondaryButton {
+  padding: 0.75rem 2rem;
+  border: 2px solid #22d3ee;
+  color: #22d3ee;
+  background: transparent;
+  font-weight: bold;
+  border-radius: 0.5rem;
+  font-family: 'Courier New', monospace;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.secondaryButton:hover {
+  background: rgba(34, 211, 238, 0.1);
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}

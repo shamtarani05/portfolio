@@ -1,0 +1,371 @@
+/* src/components/Portfolio/HeroSection/Avatar3D/Avatar.module.css */
+
+.avatarContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 400px;
+  padding: 2rem 1rem;
+  box-sizing: border-box;
+}
+
+.avatarWrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.viewport {
+  border-radius: 1rem;
+  backdrop-filter: blur(8px);
+  border: 2px solid rgba(34, 211, 238, 0.4);
+  overflow: hidden;
+  box-shadow: 
+    0 25px 50px -12px rgba(34, 211, 238, 0.3),
+    0 0 0 1px rgba(255, 255, 255, 0.05),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  position: relative;
+  background: rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.viewport:hover {
+  border-color: rgba(34, 211, 238, 0.6);
+  box-shadow: 
+    0 35px 60px -12px rgba(34, 211, 238, 0.4),
+    0 0 0 1px rgba(255, 255, 255, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.15);
+  transform: translateY(-2px);
+}
+
+.scene {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.scene canvas {
+  display: block;
+  border-radius: 0.875rem;
+}
+
+/* Loading States */
+.loadingOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(4px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.875rem;
+  z-index: 10;
+}
+
+.loadingSpinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid rgba(34, 211, 238, 0.3);
+  border-top: 3px solid #22d3ee;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 1rem;
+}
+
+.loadingText {
+  color: #22d3ee;
+  font-family: 'Courier New', monospace;
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.loadingBar {
+  width: 200px;
+  height: 4px;
+  background: rgba(34, 211, 238, 0.2);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.loadingProgress {
+  height: 100%;
+  background: linear-gradient(90deg, #22d3ee, #0ea5e9);
+  border-radius: 2px;
+  transition: width 0.3s ease;
+  position: relative;
+}
+
+.loadingProgress::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+  animation: shimmer 1.5s infinite;
+}
+
+/* HUD Elements */
+.hud {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  color: #22d3ee;
+  font-family: 'Courier New', monospace;
+  font-size: 0.75rem;
+  z-index: 5;
+}
+
+.status {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 0 10px rgba(34, 211, 238, 0.5);
+}
+
+.statusIndicator {
+  width: 0.5rem;
+  height: 0.5rem;
+  background: #10b981;
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+  box-shadow: 0 0 10px rgba(16, 185, 129, 0.5);
+}
+
+.infoPanel {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  right: 1rem;
+  z-index: 5;
+}
+
+.info {
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(8px);
+  border-radius: 0.5rem;
+  padding: 0.75rem;
+  border: 1px solid rgba(34, 211, 238, 0.3);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.infoRow {
+  display: flex;
+  justify-content: space-between;
+  color: #22d3ee;
+  font-family: 'Courier New', monospace;
+  font-size: 0.7rem;
+  text-shadow: 0 0 5px rgba(34, 211, 238, 0.3);
+}
+
+.infoRow:first-child {
+  margin-bottom: 0.25rem;
+}
+
+/* Holographic UI Elements */
+.holoElement1 {
+  position: absolute;
+  top: -2rem;
+  left: -2rem;
+  width: 4rem;
+  height: 4rem;
+  border: 2px solid rgba(34, 211, 238, 0.5);
+  border-radius: 50%;
+  animation: spin 20s linear infinite;
+  z-index: 1;
+}
+
+.holoElement2 {
+  position: absolute;
+  bottom: -2rem;
+  right: -2rem;
+  width: 3rem;
+  height: 3rem;
+  background: linear-gradient(45deg, rgba(236, 72, 153, 0.3), rgba(168, 85, 247, 0.3));
+  border-radius: 0.5rem;
+  animation: pulse 3s infinite;
+  z-index: 1;
+}
+
+.holoElement3 {
+  position: absolute;
+  top: 50%;
+  left: -3rem;
+  width: 2rem;
+  height: 2rem;
+  background: rgba(16, 185, 129, 0.4);
+  transform: rotate(45deg) translateY(-50%);
+  animation: bounce 2s infinite;
+  z-index: 1;
+}
+
+.holoElement4 {
+  position: absolute;
+  top: 25%;
+  right: -3rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  background: rgba(251, 191, 36, 0.5);
+  border-radius: 50%;
+  animation: ping 2s infinite;
+  z-index: 1;
+}
+
+/* Animations */
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale(1.05);
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: rotate(45deg) translateY(-50%) translateX(0);
+  }
+  50% {
+    transform: rotate(45deg) translateY(-50%) translateX(-0.5rem);
+  }
+}
+
+@keyframes ping {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  75%, 100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .avatarContainer {
+    padding: 1rem 0.5rem;
+    min-height: 320px;
+  }
+  
+  .hud {
+    font-size: 0.625rem;
+    top: 0.5rem;
+    left: 0.5rem;
+  }
+  
+  .infoPanel {
+    bottom: 0.5rem;
+    left: 0.5rem;
+    right: 0.5rem;
+  }
+  
+  .info {
+    padding: 0.5rem;
+  }
+  
+  .infoRow {
+    font-size: 0.625rem;
+  }
+  
+  .holoElement1 {
+    width: 3rem;
+    height: 3rem;
+    top: -1.5rem;
+    left: -1.5rem;
+  }
+  
+  .holoElement2 {
+    width: 2.5rem;
+    height: 2.5rem;
+    bottom: -1.5rem;
+    right: -1.5rem;
+  }
+  
+  .holoElement3 {
+    width: 1.5rem;
+    height: 1.5rem;
+    left: -2rem;
+  }
+  
+  .holoElement4 {
+    width: 1.2rem;
+    height: 1.2rem;
+    right: -2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .avatarContainer {
+    padding: 0.5rem;
+    min-height: 280px;
+  }
+  
+  .loadingText {
+    font-size: 0.75rem;
+  }
+  
+  .loadingBar {
+    width: 150px;
+  }
+}
+
+/* High DPI displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .scene canvas {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+  }
+}
+
+/* Dark mode compatibility */
+@media (prefers-color-scheme: dark) {
+  .viewport {
+    background: rgba(0, 0, 0, 0.2);
+    border-color: rgba(34, 211, 238, 0.5);
+  }
+}
+
+/* Reduced motion accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .holoElement1,
+  .holoElement2,
+  .holoElement3,
+  .holoElement4,
+  .statusIndicator,
+  .loadingSpinner {
+    animation: none;
+  }
+  
+  .viewport {
+    transition: none;
+  }
+}

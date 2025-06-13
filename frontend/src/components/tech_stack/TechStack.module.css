@@ -1,0 +1,125 @@
+.techStack {
+  position: relative;
+  z-index: 10;
+  padding: 5rem 1.5rem;
+}
+
+.container {
+  max-width: 90rem;
+  margin: 0 auto;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: white;
+  font-family: 'Courier New', monospace;
+  margin-bottom: 1rem;
+}
+
+.subtitle {
+  color: #00d9ff;
+  font-family: 'Courier New', monospace;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+.techCard {
+  padding: 1.5rem;
+  background-color: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(0, 217, 255, 0.2);
+  border-radius: 0.75rem;
+  transition: all 0.3s ease;
+}
+
+.techCard:hover {
+  border-color: rgba(0, 217, 255, 0.5);
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.techContent {
+  text-align: center;
+}
+
+.techIcon {
+  font-size: 2.5rem;
+  margin-bottom: 0.75rem;
+  transition: transform 0.3s ease;
+}
+
+.techCard:hover .techIcon {
+  transform: scale(1.1);
+}
+
+.techName {
+  color: white;
+  font-family: 'Courier New', monospace;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.progressBar {
+  width: 100%;
+  background-color: #374151;
+  border-radius: 9999px;
+  height: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.progressFill {
+  height: 0.5rem;
+  border-radius: 9999px;
+  transition: all 1s ease;
+}
+
+.blue .progressFill {
+  background: linear-gradient(to right, #3b82f6, #06b6d4);
+}
+
+.green .progressFill {
+  background: linear-gradient(to right, #10b981, #059669);
+}
+
+.purple .progressFill {
+  background: linear-gradient(to right, #a855f7, #ec4899);
+}
+
+.yellow .progressFill {
+  background: linear-gradient(to right, #f59e0b, #f97316);
+}
+
+.indigo .progressFill {
+  background: linear-gradient(to right, #6366f1, #3b82f6);
+}
+
+.red .progressFill {
+  background: linear-gradient(to right, #ef4444, #ec4899);
+}
+
+.techLevel {
+  color: #00d9ff;
+  font-family: 'Courier New', monospace;
+  font-size: 0.875rem;
+}
