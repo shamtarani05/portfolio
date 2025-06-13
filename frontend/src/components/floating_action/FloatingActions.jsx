@@ -1,5 +1,3 @@
-// FloatingActions.jsx
-import React from 'react';
 import styles from './FloatingActions.module.css';
 
 const FloatingActions = () => {
