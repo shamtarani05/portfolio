@@ -14,7 +14,7 @@ const TechStack = () => {
     { name: 'C++', icon: '💻', level: '75%', color: 'blue' },
     { name: 'Git', icon: '🐱‍👤', level: '70%', color: 'green' },
     { name: 'java', icon: '☕', level: '70%', color: 'indigo' },
-       { name: 'C', icon: '💻', level: '70%', color: 'yellow' },
+    { name: 'C', icon: '💻', level: '70%', color: 'yellow' },
     { name: 'Python', icon: '🐍', level: '60%', color: 'purple' },
     { name: 'Three.js', icon: '🎲', level: '50%', color: 'blue' },
   ];

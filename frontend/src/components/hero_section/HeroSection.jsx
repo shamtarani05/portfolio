@@ -46,7 +46,7 @@ const HeroSection = () => {
               <span className={styles.const}>const</span>{' '}
               <span className={styles.variable}>developer</span> = {'{'}
               <br />
-              <span className={styles.property}>specialty:</span> <span className={styles.string}>"3D Web Experiences"</span>,
+              <span className={styles.property}>specialty:</span> <span className={styles.string}>"MERN STACK"</span>,
               <br />
               <span className={styles.property}>passion:</span> <span className={styles.string}>"Interactive Design"</span>
               <br />
@@ -56,7 +56,7 @@ const HeroSection = () => {
               <span className={styles.const}>const</span>{' '}
               <span className={styles.variable}>education</span> = {'{'}
               <br />
-              <span className={styles.property}>bachelor:</span> <span className={styles.string}>"NUST Islamabad"</span>,
+              <span className={styles.property}>bachelor:</span> <span className={styles.string}>"Nust,Islamabad"</span>,
               <br />
               <span className={styles.property}>degree:</span> <span className={styles.string}>"Computer Science"</span>
               <br />

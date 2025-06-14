@@ -11,11 +11,11 @@ const Avatar = () => {
   const frameRef = useRef();
   const [modelLoaded, setModelLoaded] = useState(false);
   const [loadingProgress, setLoadingProgress] = useState(0);
-  const [containerSize, setContainerSize] = useState({ width: 400, height: 400 });
+  const [containerSize, setContainerSize] = useState({ width: 550, height: 550 });
 
   // Function to calculate responsive size
   const calculateSize = () => {
-    const minSize = 350;
+    const minSize = 300;
     const maxSize = 600;
     const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
     const vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0);
@@ -84,7 +84,7 @@ const Avatar = () => {
       (gltf) => {
         console.log('Model loaded successfully:', gltf);
         
-        avatarModel = gltf.scene;
+          avatarModel = gltf.scene;
         
         // Calculate bounding box to properly center and scale the model
         const box = new THREE.Box3().setFromObject(avatarModel);

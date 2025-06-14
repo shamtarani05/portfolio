@@ -325,8 +325,8 @@
 
 @media (max-width: 480px) {
   .avatarContainer {
-    padding: 0.5rem;
-    min-height: 280px;
+    padding: 0.2rem;
+    min-height: 250px;
   }
   
   .loadingText {
