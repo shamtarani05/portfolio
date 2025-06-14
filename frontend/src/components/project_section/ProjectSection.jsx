@@ -13,7 +13,7 @@ const ProjectsSection = () => {
     {
       title: "AegleKart",
       category: "E-Pharmacy Platform",
-      tech: ["React", "Node.js", "Express", "MongoDB", "Stripe", "Nodemailer", "StreetMaps", "pdfkit"],
+      tech: ["React", "Node.js", "Express", "MongoDB", "Stripe", "Nodemailer", "StreetMaps", "pdfkit","Supabase"],
       description:
         "A full-stack e-pharmacy platform enabling users to browse, order, and pay for medicines online with OTP authentication, Stripe integration, admin dashboards, and inventory automation. Built with the MERN stack and optimized for real-world pharmacy workflows.",
       status: "Completed",
@@ -28,6 +28,25 @@ const ProjectsSection = () => {
         { type: "ready", text: "Frontend ready on port 5173 🚀" }
       ],
       codeLink: "https://github.com/shamtarani05/AegleKart/tree/master-branch"
+    },
+    {
+      title: "Sham Portfolio",
+      category: "3D Interactive Portfolio",
+      tech: ["React", "Three.js", "Botpress Webchat", "FormSubmit", "GLB Models"],
+      description:
+        "An immersive developer portfolio built with React and Three.js, showcasing 3D-ready GLB models and smooth UI transitions. Integrated with Botpress Webchat, trained on a custom knowledge base to answer questions about skills, experience, and projects. Includes a client request form powered by FormSubmit for easy inquiries without backend.",
+      status: "Completed",
+      color: "blue-indigo",
+      icon: "🧑‍💻",
+      featured: false,
+      terminalOutput: [
+        { type: "command", text: "> npm run dev" },
+        { type: "output", text: "Starting development server..." },
+        { type: "success", text: "✓ React app running at http://localhost:5173" },
+        { type: "info", text: "✓ 3D models loaded using Three.js (GLB format)" },
+        { type: "ready", text: "Botpress Webchat connected 🤖 | Form ready for submissions 📬" }
+      ],
+      codeLink: "https://github.com/shamtarani05/portfolio"
     }
     ,
     {
@@ -233,7 +252,7 @@ const ProjectsSection = () => {
             </div>
           ))}
         </div>
-        
+
 
         {/* Call to Action */}
         <div className={styles.ctaSection}>
