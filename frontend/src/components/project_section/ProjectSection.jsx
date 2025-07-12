@@ -13,7 +13,7 @@ const ProjectsSection = () => {
     {
       title: "AegleKart",
       category: "E-Pharmacy Platform",
-      tech: ["React", "Node.js", "Express", "MongoDB", "Stripe", "Nodemailer", "StreetMaps", "pdfkit","Supabase"],
+      tech: ["React", "Node.js", "Express", "MongoDB", "Stripe", "Nodemailer", "StreetMaps", "pdfkit", "Supabase"],
       description:
         "A full-stack e-pharmacy platform enabling users to browse, order, and pay for medicines online with OTP authentication, Stripe integration, admin dashboards, and inventory automation. Built with the MERN stack and optimized for real-world pharmacy workflows.",
       status: "Completed",
@@ -29,6 +29,26 @@ const ProjectsSection = () => {
       ],
       codeLink: "https://github.com/shamtarani05/AegleKart/tree/master-branch"
     },
+    {
+      title: "Shinarawear",
+      category: "E-Commerce Jewelry Platform",
+      tech: ["React", "Node.js", "Express", "MongoDB", "Nodemailer", "StreetMaps", "pdfkit", "Supabase"],
+      description:
+        "A full-stack online jewelry store platform enabling users to browse, order, and purchase jewelry items with secure authentication, order management, admin dashboards, and inventory tracking. Built with the MERN stack and designed for elegant jewelry retail workflows.",
+      status: "Completed",
+      color: "purple-pink",
+      icon: "💎",
+      featured: false,
+      terminalOutput: [
+        { type: "command", text: "> node server.js" },
+        { type: "output", text: "Starting Shinarawear server..." },
+        { type: "success", text: "✓ Server running at http://localhost:3000" },
+        { type: "info", text: "✓ MongoDB connected successfully" },
+        { type: "ready", text: "Frontend ready on port 5173 ✨" }
+      ],
+      codeLink: "https://github.com/shamtarani05/Shinarawear",
+      viewDemo: "https://shinarawear.vercel.app"
+      },
     {
       title: "Sham Portfolio",
       category: "3D Interactive Portfolio",
@@ -183,6 +203,9 @@ const ProjectsSection = () => {
                         <div className={styles.featuredButtons}>
                           <button className={styles.secondaryButton} onClick={() => { handleViewCode(featuredProject.codeLink) }}>{'> View Code'}</button>
                         </div>
+                        {featuredProject.viewDemo&&<div className={styles.featuredButtons}>
+                          <button className={styles.secondaryButton} onClick={() => { handleViewCode(featuredProject?.viewDemo) }}>{'> Demo'}</button>
+                        </div>}
                       </div>
 
                       <div className={styles.featuredDemo}>
@@ -235,6 +258,9 @@ const ProjectsSection = () => {
                 <div className={styles.projectActions}>
                   <button className={styles.viewButton} onClick={() => { handleViewCode(project.codeLink) }}>View Code</button>
                 </div>
+                {project.viewDemo && <div className={styles.projectActions}>
+                  <button className={styles.viewButton} onClick={() => { handleViewCode(project?.viewDemo) }}>View Demo</button>
+                </div>}
               </div>
               <div className={`${styles.projectBorder} ${styles[project.color]}`}></div>
             </div>
