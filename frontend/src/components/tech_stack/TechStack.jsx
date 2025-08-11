@@ -12,11 +12,13 @@ const TechStack = () => {
     { name: 'Express.js', icon: '⚙️', level: '85%', color: 'yellow' },
     { name: 'Node.js', icon: '🚀', level: '80%', color: 'purple' },
     { name: 'C++', icon: '💻', level: '75%', color: 'blue' },
-    { name: 'Git', icon: '🐱‍👤', level: '70%', color: 'green' },
+    { name: 'ReactFlow', icon: '⚛️', level: '75%', color: 'green' },
     { name: 'java', icon: '☕', level: '70%', color: 'indigo' },
     { name: 'C', icon: '💻', level: '70%', color: 'yellow' },
-    { name: 'Python', icon: '🐍', level: '60%', color: 'purple' },
-    { name: 'Three.js', icon: '🎲', level: '50%', color: 'blue' },
+    { name: 'Git', icon: '🐱‍👤', level: '70%', color: 'purple' },
+    { name: 'Python', icon: '🐍', level: '60%', color: 'blue' },
+    { name: 'Three.js', icon: '🎲', level: '50%', color: 'green' },
+     
   ];
 
   return (

@@ -14,6 +14,7 @@ body::-webkit-scrollbar {
 body {
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
+   
 }
 
 /* Alternative: Apply to all elements if needed */
@@ -24,6 +25,7 @@ body {
 * {
   -ms-overflow-style: none;
   scrollbar-width: none;
+  
 }
 
 /* Or apply to html element */
