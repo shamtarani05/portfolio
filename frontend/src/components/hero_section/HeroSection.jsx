@@ -17,7 +17,7 @@ const HeroSection = () => {
   const downloadCV = () => {
 
     const link = document.createElement('a');
-    link.href = './Sham_Resume.pdf';
+    link.href = './sham_resume.pdf';
     link.download = 'Sham_Tarani_CV.pdf'; 
     document.body.appendChild(link);
     link.click();
