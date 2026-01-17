@@ -11,14 +11,14 @@
 }
 
 .header {
-  text-align: left;
+  text-align: center;
   margin-bottom: 2rem;
 }
 
 .titleContainer {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
   gap: 1rem;
   margin-bottom: 0.5rem;
 }
@@ -29,8 +29,8 @@
   background: linear-gradient(to right, #00d9ff, transparent);
 }
 
-.titleLine:first-child {
-  display: none;
+.titleLine:last-child {
+  background: linear-gradient(to left, #00d9ff, transparent);
 }
 
 .title {
