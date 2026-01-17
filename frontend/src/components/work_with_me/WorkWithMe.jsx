@@ -18,25 +18,25 @@ const WorkWithMe = () => {
       icon: '🌐',
       title: 'Web Development',
       desc: 'Full-stack applications with modern frameworks',
-      price: 'From PKR 7,500'
+      price: 'From $50'
     },
     {
       icon: '🎲',
       title: '3D Experiences',
       desc: 'Interactive 3D web applications & visualizations',
-      price: 'From PKR 10,000'
+      price: 'From $70'
     },
     {
       icon: '🖥️',
       title: 'Java Swing Desktop Apps',
       desc: 'Interactive Java Swing desktop applications',
-      price: 'From PKR 5,000'
+      price: 'From $35'
     },
      {
       icon: '🖥️',
       title: 'C/C++/Python Development',
       desc: 'Interactive C/C++/Python applications',
-      price: 'From PKR 5,000'
+      price: 'From $35'
     },
   ];
 
@@ -283,10 +283,10 @@ const WorkWithMe = () => {
                         required
                       >
                         <option value="">Select Budget Range</option>
-                        <option value="PKR 5K - 10K">PKR 5K - 10K</option>
-                        <option value="PKR 10K - 25K">PKR 10K - 25K</option>
-                        <option value="PKR 25K - 50K">PKR 25K - 50K</option>
-                        <option value="PKR 50K+">PKR 50K+</option>
+                        <option value="$50 - $100">$50 - $100</option>
+                        <option value="$100 - $250">$100 - $250</option>
+                        <option value="$250 - $500">$250 - $500</option>
+                        <option value="$500+">$500+</option>
                         <option value="Hourly Rate">Hourly Rate</option>
                       </select>
                     </div>

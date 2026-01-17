@@ -9,7 +9,8 @@ const ProjectsSection = () => {
       alert("Code link not available for this project.");
     }
   }
-  const projects = [
+  // Personal Projects
+  const personalProjects = [
     {
       title: "AegleKart",
       category: "E-Pharmacy Platform",
@@ -20,6 +21,7 @@ const ProjectsSection = () => {
       color: "green-lime",
       icon: "💊",
       featured: true,
+      otherContributor: "Abdul Moiz",
       terminalOutput: [
         { type: "command", text: "> node server.js" },
         { type: "output", text: "Starting AegleKart server..." },
@@ -48,27 +50,7 @@ const ProjectsSection = () => {
       ],
       codeLink: "https://github.com/shamtarani05/Shinarawear",
       viewDemo: "https://shinarawear.vercel.app"
-      },
-    {
-      title: "Sham Portfolio",
-      category: "3D Interactive Portfolio",
-      tech: ["React", "Three.js", "Botpress Webchat", "FormSubmit", "GLB Models"],
-      description:
-        "An immersive developer portfolio built with React and Three.js, showcasing 3D-ready GLB models and smooth UI transitions. Integrated with Botpress Webchat, trained on a custom knowledge base to answer questions about skills, experience, and projects. Includes a client request form powered by FormSubmit for easy inquiries without backend.",
-      status: "Completed",
-      color: "blue-indigo",
-      icon: "🧑‍💻",
-      featured: false,
-      terminalOutput: [
-        { type: "command", text: "> npm run dev" },
-        { type: "output", text: "Starting development server..." },
-        { type: "success", text: "✓ React app running at http://localhost:5173" },
-        { type: "info", text: "✓ 3D models loaded using Three.js (GLB format)" },
-        { type: "ready", text: "Botpress Webchat connected 🤖 | Form ready for submissions 📬" }
-      ],
-      codeLink: "https://github.com/shamtarani05/portfolio"
-    }
-    ,
+    },
     {
       title: "AegleCove",
       category: "Healthcare Assistant",
@@ -79,6 +61,7 @@ const ProjectsSection = () => {
       color: "blue-sky",
       icon: "🏥",
       featured: false,
+      otherContributor: "Abdul Moiz & Maier Ali",
       terminalOutput: [
         { type: "command", text: "> npm run dev" },
         { type: "output", text: "Launching AegleCove Frontend..." },
@@ -89,8 +72,27 @@ const ProjectsSection = () => {
         { type: "ready", text: "System active and ready to assist patients 🩺" }
       ],
       codeLink: "https://github.com/AbdulMoiz132/AegleCove",
-    }
-    ,
+    },
+    {
+      title: "AceTransit",
+      category: "Modern MultiModal Courier App",
+      tech: ["Next.js", "TypeScript", "Tailwind", "Text-to-Speech", "Rule-based AI Agent", "Supabase"],
+      description:
+        "AceTransit is a modern and multimodal courier application designed to streamline delivery operations. It features text-to-speech capabilities for hands-free operation and a rule-based AI agent for intelligent routing and scheduling decisions. Built with Next.js and TypeScript for robust performance.",
+      status: "Completed",
+      color: "cyan-teal",
+      icon: "🚚",
+      featured: false,
+      otherContributor: "Abdul Moiz",
+      terminalOutput: [
+        { type: "command", text: "> npm run dev" },
+        { type: "output", text: "Starting AceTransit..." },
+        { type: "success", text: "✓ Next.js server running" },
+        { type: "info", text: "✓ AI Agent initialized" },
+        { type: "ready", text: "Ready for deliveries 📦" }
+      ],
+      codeLink: "https://github.com/AbdulMoiz132/AceTransit",
+    },
     {
       title: "Foodie Express",
       category: "Full-Stack App",
@@ -109,9 +111,7 @@ const ProjectsSection = () => {
         { type: "ready", text: "✓ New restaurant added ✅" }
       ],
       codeLink: "https://github.com/shamtarani05/FoodieExpress",
-    }
-
-    ,
+    },
     {
       title: "Quizardry",
       category: "Quiz Management System",
@@ -131,8 +131,54 @@ const ProjectsSection = () => {
       ],
       codeLink: "https://github.com/shamtarani05/Quizardry/blob/master/src/loginandsignup/Main.java"
     }
+  ];
 
+  // Fiverr Projects
+  const fiverrProjects = [
+    {
+      title: "Optivolt Staffing",
+      category: "Client & Worker Platform",
+      tech: ["Next.js", "TypeScript", "Tailwind", "Supabase", "Realtime Database"],
+      description:
+        "An immersive staffing platform connecting clients and workers. Clients can post jobs, message applicants, manage payments and invoices. Workers can find and apply for jobs, and request payments. Features a comprehensive client admin dashboard to manage both workers and clients efficiently.",
+      status: "Completed",
+      color: "orange-red",
+      icon: "👷",
+      featured: true,
+      terminalOutput: [
+        { type: "command", text: "> npm run dev" },
+        { type: "output", text: "Starting Optivolt Staffing..." },
+        { type: "success", text: "✓ Next.js server running" },
+        { type: "info", text: "✓ Supabase Realtime connected" },
+        { type: "ready", text: "Platform ready for clients & workers 💼" }
+      ],
+      codeLink: null,
+    }
+  ];
 
+  // Long Term & Ongoing Projects
+  const longTermProjects = [
+    {
+      title: "Romails",
+      category: "USA E-Store & Tailoring",
+      tech: ["Web Development", "E-Commerce", "Maintenance"],
+      description:
+        "Romails is a USA-based e-store and tailoring platform. As the maintainer, I am responsible for updating and maintaining the website according to business needs, ensuring smooth operation and implementing new features as required.",
+      status: "Ongoing",
+      color: "blue-purple",
+      icon: "🛍️",
+      featured: false,
+      role: "Maintain and update website as per needs",
+      terminalOutput: [
+        { type: "command", text: "> status --check" },
+        { type: "output", text: "Checking Romails status..." },
+        { type: "success", text: "✓ Website running smoothly" },
+        { type: "info", text: "✓ All systems operational" },
+        { type: "ready", text: "Ready for updates 🔧" }
+      ],
+      codeLink: null,
+      viewDemo: "https://romails.com"
+    }
   ];
 
   const stats = [
@@ -152,9 +198,108 @@ const ProjectsSection = () => {
     }
   }
 
-  // Get featured projects and regular projects
-  const featuredProjects = projects.filter(project => project.featured === true);
-  const regularProjects = projects.filter(project => project.featured === false);
+  // Get featured and regular projects for each section
+  const personalFeatured = personalProjects.filter(project => project.featured === true);
+  const personalRegular = personalProjects.filter(project => project.featured === false);
+  const fiverrFeatured = fiverrProjects.filter(project => project.featured === true);
+  const fiverrRegular = fiverrProjects.filter(project => project.featured === false);
+
+  // Render a featured project card
+  const renderFeaturedProject = (featuredProject) => (
+    <div key={featuredProject.title} className={styles.featuredProject}>
+      <div className={styles.featuredCard}>
+        <div className={styles.featuredBg}></div>
+        <div className={styles.featuredContent}>
+          <div className={styles.featuredGrid}>
+            <div className={styles.featuredInfo}>
+              <div className={styles.terminalHeader}>
+                <div className={styles.terminalDots}>
+                  <div className={`${styles.dot} ${styles.dotRed}`}></div>
+                  <div className={`${styles.dot} ${styles.dotYellow}`}></div>
+                  <div className={`${styles.dot} ${styles.dotGreen}`}></div>
+                </div>
+                <span className={styles.terminalTitle}>featured_project.exe</span>
+              </div>
+
+              <h3 className={styles.featuredTitle}>{featuredProject.title}</h3>
+              {featuredProject.otherContributor && (
+                <p className={styles.contributorTag}>Other Contributor: {featuredProject.otherContributor}</p>
+              )}
+              <div className={styles.techTags}>
+                {featuredProject.tech.map((tech) => (
+                  <span key={tech} className={styles.techTag}>{tech}</span>
+                ))}
+              </div>
+
+              <p className={styles.featuredDescription}>{featuredProject.description}</p>
+
+              {featuredProject.codeLink && <div className={styles.featuredButtons}>
+                <button className={styles.secondaryButton} onClick={() => { handleViewCode(featuredProject.codeLink) }}>{'> View Code'}</button>
+              </div>}
+              {featuredProject.viewDemo && <div className={styles.featuredButtons}>
+                <button className={styles.secondaryButton} onClick={() => { handleViewCode(featuredProject?.viewDemo) }}>{'> Demo'}</button>
+              </div>}
+            </div>
+
+            <div className={styles.featuredDemo}>
+              <div className={styles.terminalDemo}>
+                <div className={styles.terminalStatus}>
+                  <div className={styles.statusDot}></div>
+                  <span>SYSTEM RUNNING</span>
+                </div>
+                <div className={styles.terminalOutput}>
+                  {featuredProject.terminalOutput.map((line, index) => (
+                    <div key={index} className={styles[`${line.type}Line`]}>
+                      {line.text}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+
+  // Render a regular project card
+  const renderProjectCard = (project) => (
+    <div key={project.title} className={styles.projectCard}>
+      <div className={`${styles.projectBg} ${styles[project.color]}`}></div>
+      <div className={styles.projectContent}>
+        <div className={styles.projectHeader}>
+          <div className={styles.projectIcon}>{project.icon}</div>
+          <div className={`${styles.statusBadge} ${styles[project.status.toLowerCase().replace(' ', '')]}`}>
+            {project.status}
+          </div>
+        </div>
+
+        <h3 className={styles.projectTitle}>{project.title}</h3>
+        <p className={styles.projectCategory}>{project.category}</p>
+        {project.otherContributor && (
+          <p className={styles.contributorInfo}>Other Contributor: {project.otherContributor}</p>
+        )}
+        {project.role && (
+          <p className={styles.roleInfo}>Role: {project.role}</p>
+        )}
+        <p className={styles.projectDescription}>{project.description}</p>
+
+        <div className={styles.projectTech}>
+          {project.tech.map((tech) => (
+            <span key={tech} className={styles.projectTechTag}>{tech}</span>
+          ))}
+        </div>
+
+        {project.codeLink && <div className={styles.projectActions}>
+          <button className={styles.viewButton} onClick={() => { handleViewCode(project.codeLink) }}>View Code</button>
+        </div>}
+        {project.viewDemo && <div className={styles.projectActions}>
+          <button className={styles.viewButton} onClick={() => { handleViewCode(project?.viewDemo) }}>View Demo</button>
+        </div>}
+      </div>
+      <div className={`${styles.projectBorder} ${styles[project.color]}`}></div>
+    </div>
+  );
 
   return (
     <section className={styles.projectsSection}>
@@ -171,100 +316,49 @@ const ProjectsSection = () => {
           </p>
         </div>
 
+        {/* Personal Projects Section */}
+        <div className={styles.categorySection}>
+          <h3 className={styles.categoryTitle}>{'// Personal Projects'}</h3>
 
-        {/* Featured Projects */}
-        {featuredProjects.length > 0 && (
-          <div className={styles.featuredSection}>
-            {featuredProjects.map((featuredProject) => (
-              <div key={featuredProject.title} className={styles.featuredProject}>
-                <div className={styles.featuredCard}>
-                  <div className={styles.featuredBg}></div>
-                  <div className={styles.featuredContent}>
-                    <div className={styles.featuredGrid}>
-                      <div className={styles.featuredInfo}>
-                        <div className={styles.terminalHeader}>
-                          <div className={styles.terminalDots}>
-                            <div className={`${styles.dot} ${styles.dotRed}`}></div>
-                            <div className={`${styles.dot} ${styles.dotYellow}`}></div>
-                            <div className={`${styles.dot} ${styles.dotGreen}`}></div>
-                          </div>
-                          <span className={styles.terminalTitle}>featured_project.exe</span>
-                        </div>
-
-                        <h3 className={styles.featuredTitle}>{featuredProject.title}</h3>
-                        <div className={styles.techTags}>
-                          {featuredProject.tech.map((tech) => (
-                            <span key={tech} className={styles.techTag}>{tech}</span>
-                          ))}
-                        </div>
-
-                        <p className={styles.featuredDescription}>{featuredProject.description}</p>
-
-                        <div className={styles.featuredButtons}>
-                          <button className={styles.secondaryButton} onClick={() => { handleViewCode(featuredProject.codeLink) }}>{'> View Code'}</button>
-                        </div>
-                        {featuredProject.viewDemo&&<div className={styles.featuredButtons}>
-                          <button className={styles.secondaryButton} onClick={() => { handleViewCode(featuredProject?.viewDemo) }}>{'> Demo'}</button>
-                        </div>}
-                      </div>
-
-                      <div className={styles.featuredDemo}>
-                        <div className={styles.terminalDemo}>
-                          <div className={styles.terminalStatus}>
-                            <div className={styles.statusDot}></div>
-                            <span>SYSTEM RUNNING</span>
-                          </div>
-                          <div className={styles.terminalOutput}>
-                            {featuredProject.terminalOutput.map((line, index) => (
-                              <div key={index} className={styles[`${line.type}Line`]}>
-                                {line.text}
-                              </div>
-                            ))}
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        )}
-
-
-        {/* Project Grid */}
-        <div className={styles.projectGrid}>
-          {regularProjects.map((project) => (
-            <div key={project.title} className={styles.projectCard}>
-              <div className={`${styles.projectBg} ${styles[project.color]}`}></div>
-              <div className={styles.projectContent}>
-                <div className={styles.projectHeader}>
-                  <div className={styles.projectIcon}>{project.icon}</div>
-                  <div className={`${styles.statusBadge} ${styles[project.status.toLowerCase().replace(' ', '')]}`}>
-                    {project.status}
-                  </div>
-                </div>
-
-                <h3 className={styles.projectTitle}>{project.title}</h3>
-                <p className={styles.projectCategory}>{project.category}</p>
-                <p className={styles.projectDescription}>{project.description}</p>
-
-                <div className={styles.projectTech}>
-                  {project.tech.map((tech) => (
-                    <span key={tech} className={styles.projectTechTag}>{tech}</span>
-                  ))}
-                </div>
-
-                <div className={styles.projectActions}>
-                  <button className={styles.viewButton} onClick={() => { handleViewCode(project.codeLink) }}>View Code</button>
-                </div>
-                {project.viewDemo && <div className={styles.projectActions}>
-                  <button className={styles.viewButton} onClick={() => { handleViewCode(project?.viewDemo) }}>View Demo</button>
-                </div>}
-              </div>
-              <div className={`${styles.projectBorder} ${styles[project.color]}`}></div>
+          {/* Featured Personal Projects */}
+          {personalFeatured.length > 0 && (
+            <div className={styles.featuredSection}>
+              {personalFeatured.map(renderFeaturedProject)}
             </div>
-          ))}
+          )}
+
+          {/* Regular Personal Projects */}
+          <div className={styles.projectGrid}>
+            {personalRegular.map(renderProjectCard)}
+          </div>
+        </div>
+
+        {/* Fiverr Projects Section */}
+        <div className={styles.categorySection}>
+          <h3 className={styles.categoryTitle}>{'// Fiverr Projects'}</h3>
+
+          {/* Featured Fiverr Projects */}
+          {fiverrFeatured.length > 0 && (
+            <div className={styles.featuredSection}>
+              {fiverrFeatured.map(renderFeaturedProject)}
+            </div>
+          )}
+
+          {/* Regular Fiverr Projects */}
+          {fiverrRegular.length > 0 && (
+            <div className={styles.projectGrid}>
+              {fiverrRegular.map(renderProjectCard)}
+            </div>
+          )}
+        </div>
+
+        {/* Long Term & Ongoing Projects Section */}
+        <div className={styles.categorySection}>
+          <h3 className={styles.categoryTitle}>{'// Long Term & Ongoing Projects'}</h3>
+
+          <div className={styles.projectGrid}>
+            {longTermProjects.map(renderProjectCard)}
+          </div>
         </div>
 
 

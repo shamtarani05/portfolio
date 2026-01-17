@@ -1,6 +1,7 @@
 // src/components/Portfolio/Portfolio.jsx
 import HeroSection from '../hero_section/HeroSection';
 import ProjectsSection from '../project_section/ProjectSection';
+import ReviewsSection from '../reviews_section/ReviewsSection';
 import TechStack from '../tech_stack/TechStack';
 import WorkWithMe from '../work_with_me/WorkWithMe';
 import FloatingActions from '../floating_action/FloatingActions';
@@ -17,6 +18,9 @@ const Portfolio = () => {
       </section>
       <section id="projects">
         <ProjectsSection />
+      </section>
+      <section id="reviews">
+        <ReviewsSection />
       </section>
       <section id="skills">
         <TechStack />
