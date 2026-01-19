@@ -133,28 +133,28 @@ const ProjectsSection = () => {
     }
   ];
 
-  // Fiverr Projects
-  const fiverrProjects = [
-    {
-      title: "Optivolt Staffing",
-      category: "Client & Worker Platform",
-      tech: ["Next.js", "TypeScript", "Tailwind", "Supabase", "Realtime Database"],
-      description:
-        "An immersive staffing platform connecting clients and workers. Clients can post jobs, message applicants, manage payments and invoices. Workers can find and apply for jobs, and request payments. Features a comprehensive client admin dashboard to manage both workers and clients efficiently.",
-      status: "Completed",
-      color: "orange-red",
-      icon: "👷",
-      featured: true,
-      terminalOutput: [
-        { type: "command", text: "> npm run dev" },
-        { type: "output", text: "Starting Optivolt Staffing..." },
-        { type: "success", text: "✓ Next.js server running" },
-        { type: "info", text: "✓ Supabase Realtime connected" },
-        { type: "ready", text: "Platform ready for clients & workers 💼" }
-      ],
-      codeLink: null,
-    }
-  ];
+  // // Fiverr Projects
+  // const fiverrProjects = [
+  //   {
+  //     title: "Optivolt Staffing",
+  //     category: "Client & Worker Platform",
+  //     tech: ["Next.js", "TypeScript", "Tailwind", "Supabase", "Realtime Database"],
+  //     description:
+  //       "An immersive staffing platform connecting clients and workers. Clients can post jobs, message applicants, manage payments and invoices. Workers can find and apply for jobs, and request payments. Features a comprehensive client admin dashboard to manage both workers and clients efficiently.",
+  //     status: "Completed",
+  //     color: "orange-red",
+  //     icon: "👷",
+  //     featured: true,
+  //     terminalOutput: [
+  //       { type: "command", text: "> npm run dev" },
+  //       { type: "output", text: "Starting Optivolt Staffing..." },
+  //       { type: "success", text: "✓ Next.js server running" },
+  //       { type: "info", text: "✓ Supabase Realtime connected" },
+  //       { type: "ready", text: "Platform ready for clients & workers 💼" }
+  //     ],
+  //     codeLink: null,
+  //   }
+  // ];
 
   // Long Term & Ongoing Projects
   const longTermProjects = [
@@ -201,8 +201,7 @@ const ProjectsSection = () => {
   // Get featured and regular projects for each section
   const personalFeatured = personalProjects.filter(project => project.featured === true);
   const personalRegular = personalProjects.filter(project => project.featured === false);
-  const fiverrFeatured = fiverrProjects.filter(project => project.featured === true);
-  const fiverrRegular = fiverrProjects.filter(project => project.featured === false);
+  
 
   // Render a featured project card
   const renderFeaturedProject = (featuredProject) => (
@@ -333,24 +332,7 @@ const ProjectsSection = () => {
           </div>
         </div>
 
-        {/* Fiverr Projects Section */}
-        <div className={styles.categorySection}>
-          <h3 className={styles.categoryTitle}>{'// Fiverr Projects'}</h3>
-
-          {/* Featured Fiverr Projects */}
-          {fiverrFeatured.length > 0 && (
-            <div className={styles.featuredSection}>
-              {fiverrFeatured.map(renderFeaturedProject)}
-            </div>
-          )}
-
-          {/* Regular Fiverr Projects */}
-          {fiverrRegular.length > 0 && (
-            <div className={styles.projectGrid}>
-              {fiverrRegular.map(renderProjectCard)}
-            </div>
-          )}
-        </div>
+       
 
         {/* Long Term & Ongoing Projects Section */}
         <div className={styles.categorySection}>

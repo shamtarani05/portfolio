@@ -7,7 +7,7 @@ const ReviewsSection = () => {
       id: 1,
       reviewer: "Ckinfinte",
       platform: "fiverr",
-      project: "Optivolt Staffing",
+      project: "",
       rating: 5,
       review: "Sham delivered an outstanding job! The quality of his work was truly exceptional — precise, professional, and exactly what I envisioned. He went above and beyond in every aspect, showing great attention to detail and creativity. Communication was smooth and easy throughout, making the whole process a pleasure. I'm extremely impressed and will definitely be working with Sham again. Highly recommended!",
       metrics: {
